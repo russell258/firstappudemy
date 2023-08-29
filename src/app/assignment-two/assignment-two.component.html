@@ -1,0 +1,11 @@
+<h1>Assignment Two: Data Binding</h1>
+<p>Add a input field which updates a property, username via Two Way Binding</p>
+<p>Output the username property via String interpolation</p>
+<p>Add a button which may only be clicked if the username is NOT empty</p>
+<p>Upon clicking the button, the username should be reset to an empty string</p>
+<hr>
+
+<label>Update Username:</label>
+<input type="text" ([ngModel]) = "username" (input)="onUpdateUsername($event)">
+<p>Username: {{username}}</p>
+<button [disabled]="isUsernameEmpty" (click) = "onResetUsername()">Reset username to empty!</button>
