@@ -1,0 +1,20 @@
+<h1>ng Directive Assignments</h1>
+<p>1. Add button saying "Display Details"</p>
+<p>2. Add paragraph with any content of choice</p>
+<p>3. Toggle displaying of that paragraph with the button in first step</p>
+<p>4. Log all button clicks in array and output that array below secret paragraph with timestamp or incrementing number</p>
+<p>5. Starting at 5th log item, all future log items give blue background (with ngStyle) and white color (ngClass)</p>
+<hr>
+
+<button class="btn btn-primary" (click)="onDisplay()">Display Details</button>
+<br>
+<span *ngIf="display">
+    Directive Details: ngIf; else, ngFor, ngClass, ngStyle
+</span>
+<br>
+<span *ngFor = "let i of arr" 
+        [ngStyle]="styleClass?{'background-color':'blue'}:{}"
+        [ngClass]="{greaterThanFour: i >=5}">
+    {{i}}
+    <br>
+</span>

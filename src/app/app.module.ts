@@ -6,13 +6,15 @@ import { FormsModule } from '@angular/forms';
 import { ServersComponent } from './servers/servers.component';
 import { ServerComponent } from './server/server.component';
 import { AssignmentTwoComponent } from './assignment-two/assignment-two.component';
+import { DirectiveAssignmentComponent } from './directive-assignment/directive-assignment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServersComponent,
     ServerComponent,
-    AssignmentTwoComponent
+    AssignmentTwoComponent,
+    DirectiveAssignmentComponent
   ],
   imports: [
     BrowserModule,
