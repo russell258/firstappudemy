@@ -6,6 +6,6 @@
 <hr>
 
 <label>Update Username:</label>
-<input type="text" ([ngModel]) = "username" (input)="onUpdateUsername($event)">
+<input type="text" ([ngModel]) = "username" (input)=onUpdateUsername($event)>
 <p>Username: {{username}}</p>
-<button [disabled]="isUsernameEmpty" (click) = "onResetUsername()">Reset username to empty!</button>
+<button class = "btn btn-info" [disabled]="isUsernameEmpty" (click) = onResetUsername()>Reset username to empty!</button>

@@ -19,7 +19,7 @@ export class AssignmentTwoComponent {
   }
 
   onResetUsername(){
-    console.log("onResetUsername clicked!");
+    console.log("onResetUsername clicked, resetting: "+ this.username);
     this.username="";
   }
 

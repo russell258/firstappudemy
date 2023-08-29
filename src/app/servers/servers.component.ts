@@ -11,6 +11,8 @@ export class ServersComponent {
   allowNewServer: boolean = false;
   serverCreationStatus = 'No server was created';
   serverName="testServer";
+  serverCreated:boolean = false;
+  servers=['Testserver','Testserver 2'];
 
   // once page loads, will set the allowNewServer to true after 2 seconds
   constructor(){
@@ -25,7 +27,9 @@ export class ServersComponent {
   }
 
   onCreateServer(){
+    this.serverCreated=true;
     this.serverCreationStatus='Server was created! Name is '+  this.serverName;
+    this.servers.push(this.serverName);
   }
 
   //adding ($event) in the html side allows you to pass the data over to this argument here
