@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class ServersComponent {
 
+  //this is property binded to the [disabled] in html
+  allowNewServer: boolean = false;
+
+  // once page loads, will set the allowNewServer to true after 2 seconds
+  constructor(){
+    setTimeout(()=>{
+      this.allowNewServer = true;
+    },2000);
+  }
+
+
+  ngOnInit(){
+    
+  }
+
 }
